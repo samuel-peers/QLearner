@@ -1,4 +1,4 @@
-public class QLearner{
+abstract public class QLearner{
 
 /* The 2D array GRID is a graph representation of: 
     ___________________
@@ -54,7 +54,7 @@ public class QLearner{
 	/***************************************************************************
      Print out the values of the Q-Table
     /**************************************************************************/
-	public void printQtable(){
+	final public void printQtable(){
 
         for(int row = 0; row < NUM_STATES; row++){
 
@@ -68,16 +68,16 @@ public class QLearner{
 	/***************************************************************************
      The almighty Q-formula. Called in the explore method
     /**************************************************************************/
-    protected int qFormula(int curr_state, int action, int max_qval, int qval){
+    final protected int qFormula(int state, int action, int max_qval, int qval){
         double r;
-        r = (qval + BETA*(GRID[curr_state][action] + GAMMA*(max_qval) - qval));
+        r = (qval + BETA*(GRID[state][action] + GAMMA*(max_qval) - qval));
         return (int)r;
     }
 
     /***************************************************************************
      Returns the highest Qvalue of states reachable from curr_state
     ***************************************************************************/
-    protected int getMaxQval(int state){
+    final protected int getMaxQval(int state){
 
         int qval;
         int max;
@@ -100,7 +100,7 @@ public class QLearner{
      that all Q-values for each action is equal to 0. In such a case we 
      pick an action at random
     ***************************************************************************/
-    protected int getMaxAction(int curr_state){
+    final protected int getMaxAction(int curr_state){
 
         int qval;
         int max_action;
@@ -131,7 +131,7 @@ public class QLearner{
     /***************************************************************************
      Randomly choose a valid action
     ***************************************************************************/
-    protected int getValidAction(int curr_state){
+    final protected int getValidAction(int curr_state){
 
         boolean valid;
         int action;
