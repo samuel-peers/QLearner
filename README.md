@@ -12,7 +12,7 @@ The EpsilonLearner will choose a random action with probability Epsilon and choo
 
 ###To Run ExploreLearner:
 1. `javac ExploreLearner.java`
-2. `java ExploreLearner [n]
+2. `java ExploreLearner [n]`
 
 Where `n` is the number of episodes done in the explore phase. Try really small numbers (1-5) and bigger numbers (10+) and compare how well the Learner performs (it performs optimally for values 10+)
 
