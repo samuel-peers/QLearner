@@ -18,8 +18,7 @@ abstract public class QLearner{
     See that the edge between state 11 and state 12, and between state 13
     and 12, is 10, which is the reward.
 */
-
-	protected final int NUM_STATES = 16;
+    protected final int NUM_STATES = 16;
     protected final int NUM_ACTIONS = 16;
     protected final double GAMMA = 0.8; //Discount factor
     protected final double BETA = 1.0; //Learning rate
@@ -29,7 +28,7 @@ abstract public class QLearner{
 
 	public QLearner(){
 
-		q_table = new int[NUM_STATES][NUM_ACTIONS];
+	q_table = new int[NUM_STATES][NUM_ACTIONS];
         goal_state = 12;
                           
         // We need a better way to implement a grid; this is error prone     
@@ -51,7 +50,7 @@ abstract public class QLearner{
                             {-1,-1,-1,-1,-1,-1,-1,-1, 0,-1,-1,-1,-1,-1, 0,-1}};  
 	}
 
-	/***************************************************************************
+    /***************************************************************************
      Print out the values of the Q-Table
     /**************************************************************************/
 	final public void printQtable(){
@@ -65,7 +64,7 @@ abstract public class QLearner{
         } 
     }
 
-	/***************************************************************************
+    /***************************************************************************
      The almighty Q-formula. Called in the explore method
     /**************************************************************************/
     final protected int qFormula(int state, int action, int max_qval, int qval){
