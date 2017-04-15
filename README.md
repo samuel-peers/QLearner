@@ -10,13 +10,13 @@ The ExploreLearner randomly explores the grid until it finds the goal state (it 
 
 The EpsilonLearner will choose a random action with probability Epsilon and choose an optimal action (according to what it currently knows) otherwise. At first it will not perform optimally, but eventually it does.
 
-###To Run ExploreLearner:
+To Run ExploreLearner:
 1. `javac ExploreLearner.java`
 2. `java ExploreLearner [n]`
 
 Where `n` is the number of episodes done in the explore phase. Try really small numbers (1-5) and bigger numbers (10+) and compare how well the Learner performs (it performs optimally for values 10+)
 
-###To Run EpsilonLearner:
+To Run EpsilonLearner:
 1. `javac EpsilonLearner.java`
 2. `java EpsilonLeaner [e]`
 
