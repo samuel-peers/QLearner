@@ -26,7 +26,7 @@ abstract public class QLearner{
     protected int q_table[][];
     protected int goal_state;
 
-	public QLearner(){
+    public QLearner(){
 
 	q_table = new int[NUM_STATES][NUM_ACTIONS];
         goal_state = 12;
