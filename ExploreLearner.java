@@ -4,15 +4,13 @@ import java.util.Random;
  Explore - Exploit Phase Q-learning Example
 
  A super fun Q-Learner that finds the most efficient path to a cell in a grid!
- Seriously though this is really cool, I think so at least. The Q-Leaner
- acheives its goal by first exploring the grid randomly, updating the reward
- for a given action-state pair as it goes using the famous Q-formula.
+ The Q-Leaner acheives its goal by first exploring the grid randomly, updating
+ the reward for a given action-state pair as it goes using the famous Q-formula.
  TO RUN:
  > javac ExploreExploit.java
  > java ExploreExploit [n]
  Where n is the number of episodes performed in the explore phase. The default
  is 10,000 episodes.
- Have fun!
 *******************************************************************************/
 
 /* The 2D array GRID is a graph representation of: 
@@ -44,7 +42,7 @@ class ExploreLearner extends QLearner{
                              // (10ish)  
 
     public ExploreLearner(int explore_val){
-    	super(); 
+    	   super(); 
         this.explore_val = explore_val;      
     }
     
